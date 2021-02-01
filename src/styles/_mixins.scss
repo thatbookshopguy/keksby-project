@@ -1,0 +1,30 @@
+@mixin title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 39.5px;
+  line-height: 1.56;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @include mobile {
+   text-align: center;
+   font-size: 35px;
+  }
+
+  @include mobile-s {
+   text-align: center;
+   font-size: 30px;
+  }
+}
+
+@mixin button {
+  border: solid 2px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+}

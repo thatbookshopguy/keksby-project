@@ -1,0 +1,125 @@
+.features {
+  margin: 0 auto;
+  padding-top: 160px;
+  padding-bottom: 74px;
+  background-color: $color-yellow;
+
+  @include mobile {
+    padding: 70px 0;
+  }
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: calc(100% - 103px);
+  max-width: 1097px;
+
+  @include mobile {
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+.features__item {
+  position: relative;
+  width: 210px;
+
+  @include mobile {
+    margin: 0 0 0 35%;
+    width: 55%;
+    text-align: left;
+  }
+}
+
+.features__item:nth-child(2) {
+  @include mobile {
+    margin-top: 50px;
+  }
+}
+
+.features__item:nth-child(3) {
+  margin-right: 46px;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+}
+
+.features__item:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 50px;
+  height: 68px;
+  background-image: url("../img/icon-brew.png");
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    left: -25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.features__item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 45px;
+  height: 65px;
+  background-image: url("../img/icon-matreshka.png");
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    left: -25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.features__item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 63px;
+  height: 58px;
+  background-image: url("../img/icon-thumbsup.png");
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    left: -25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.features-item__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @include mobile {
+    margin: 10px 0 0;
+  }
+}
+
+.features-item__text {
+  @include mobile {
+    margin: 8px 0 0;
+    line-height: 1.2;
+  }
+}

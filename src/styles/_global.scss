@@ -1,0 +1,56 @@
+@import "../../../node_modules/normalize.css/normalize";
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.88;
+  color: $color-dark-gray;
+}
+
+section {
+  @include mobile {
+    padding: 50px 10%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.visually-hidden {
+  display: none;
+}

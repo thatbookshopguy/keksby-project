@@ -1,0 +1,78 @@
+.press {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $color-light-gray;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.press__title {
+  @include title;
+
+  margin: 0 auto;
+  width: 800px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.press__quote {
+  position: relative;
+  margin: 75px auto 0;
+  width: 800px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.press__quote::before {
+  content: "";
+  position: absolute;
+  left: -106px;
+  top: 5px;
+  width: 41px;
+  height: 31px;
+  background-image: url("../img/quotes.png");
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.quote__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.quote__btn {
+  @include button;
+
+  border-color: $color-black;
+  width: 168px;
+  opacity: 0.3;
+}
+
+.quote__btn:hover {
+  border: none;
+  color: #fff;
+  background-color: #a5a097;
+}
+
+.quote__btn:active {
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #8f8a81;
+}
+
+.quote__author {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $color-black;
+}

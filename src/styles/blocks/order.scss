@@ -1,0 +1,287 @@
+.order {
+  padding-top: 80px;
+  padding-bottom: 91px;
+  background-color: $color-yellow;
+
+  @include mobile {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+  }
+}
+
+.order__wrapper {
+  margin: 0 auto;
+  width: 800px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.order__title {
+  @include title;
+}
+
+.order__text {
+  margin-top: 74px;
+  width: 640px;
+
+  @include mobile {
+    margin: 25px auto 0;
+    width: 90%;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.order-form {
+  margin-top: 65px;
+
+  @include mobile {
+    margin-top: 35px;
+  }
+}
+
+.order-form__label {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 630px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+input {
+  margin: 5px 0 20px;
+  border: none;
+  padding: 19px 20px;
+  height: 50px;
+  font-family: $font-family-arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: left;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+input:focus {
+  background-color: #fff;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.order-form__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.order-form__tel {
+  width: 290px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.order-form__select {
+  appearance: none;
+  display: block;
+  margin: 4px 0 19px;
+  outline: none;
+  border: none;
+  padding: 16px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: $font-family-arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    font-size: 13px;
+  }
+}
+
+.order-form__select::-ms-expand {
+  display: none;
+}
+
+.order-form__select:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.order-form__select-wrapper {
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.order-form__select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: 22px;
+  width: 19px;
+  height: 10px;
+  background-image: url("../img/dropdown.png");
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    top: 40%;
+  }
+}
+
+.order-form__select option {
+  font-weight: 400;
+}
+
+textarea {
+  margin-top: 5px;
+  border: none;
+  padding: 19px 20px;
+  width: 100%;
+  height: 121px;
+  font-family: $font-family-arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+textarea:focus {
+  background-color: #fff;
+}
+
+.order-form__checkbox {
+  position: relative;
+  display: block;
+  margin-top: 31px;
+  padding-left: 52px;
+  cursor: pointer;
+  user-select: none;
+
+  @include mobile {
+    margin-top: 15px;
+    line-height: 1.2;
+  }
+}
+
+.order-form__checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.order-form__checkmark {
+  position: absolute;
+  left: -1px;
+  top: -13px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    top: 0;
+  }
+}
+
+.order-form__checkmark:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.order-form__checkbox input:checked ~ .order-form__checkmark {
+  background-color: #fff;
+}
+
+.order-form__checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.order-form__checkbox input:checked ~ .order-form__checkmark::after {
+  display: block;
+}
+
+.order-form__checkbox .order-form__checkmark::after {
+  left: 9px;
+  top: 13px;
+  width: 17px;
+  height: 11px;
+  background-image: url("../img/checked.png");
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="submit"] {
+  @include button;
+
+  display: block;
+  margin-top: 38px;
+  border: none;
+  padding-top: 16px;
+  width: 200px;
+  color: $color-white;
+  background-color: $color-brown;
+
+  &:hover {
+    background-color: #6a3900;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #6a3900;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
